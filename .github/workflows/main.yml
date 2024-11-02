@@ -7,7 +7,7 @@ jobs:
      run-ons: ubantu-latest
 
      steps:
-     -uses:actions/checkout@v3
+     uses: actions/checkout@v3
 
-     -name:Run a sample github actions
+     -name: Run a sample github actions
      -run echo "this workflow run successfully actions"
