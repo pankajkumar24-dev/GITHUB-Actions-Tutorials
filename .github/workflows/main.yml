@@ -1,0 +1,13 @@
+name: First worflow
+
+on: push
+
+jobs: 
+  build:
+     run-ons: ubantu-latest
+
+     steps:
+     -uses:actions/checkout@v3
+
+     -name:Run a sample github actions
+     -run echo "this workflow run successfully actions"
