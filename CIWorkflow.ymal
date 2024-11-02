@@ -1,0 +1,26 @@
+name: CIWorkflow  # Name of the workflow
+
+on:
+  push:  # Trigger on code push
+    branches:  # You can specify branches, or use `branches: ['*']` for all
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # OS environment for the job
+
+    steps:
+      - name: Checkout code  # Check out the code from the repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js  # Example: setting up Node.js (replace with relevant setup)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install dependencies  # Install project dependencies
+        run: npm install
+
+      - name: Run tests  # Run your tests
+        run: npm test
